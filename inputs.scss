@@ -1,0 +1,163 @@
+.input {
+  border-radius: 10px;
+  border: 2px solid $gray;
+  outline: unset;
+  font-size: 16px;
+  color: #333333;
+  padding: 8px 16px;
+  width: 100%;
+  max-width: 100%;
+
+  &::placeholder {
+    color: #555555;
+  }
+  &:focus {
+    border-color: $blue;
+  }
+
+  &:disabled {
+    border-color: $gray !important;
+    background-color: #e8e8e8 !important;
+    color: $gray !important;
+  }
+}
+
+
+
+/* Checkbox */
+.checkbox {
+  & > input[type="checkbox"], & > input[type="radio"] {
+    opacity: 0;
+  }
+
+  position: relative;
+  display: block;
+  line-height: 18px;
+  padding-left: 5px;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  margin: 5px 0;
+
+  & > span {
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      display: block;
+
+      border-radius: 5px;
+      border: 2px solid $blue;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 14px;
+      height: 14px;
+    }
+
+    &::after {
+      content: "";
+      mask: url("../icons/checkbox_blue.svg") no-repeat 50% 50%;
+      mask-size: 70% 70%;
+      background-color: $blue;
+      display: inline-block;
+      text-align: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 18px;
+      height: 18px;
+      opacity: 0;
+      transition: 0.1s opacity;
+    }
+  }
+
+  & > input:checked ~ span::after {
+    opacity: 1;
+  }
+
+  & > input:disabled ~ span {
+    cursor: unset;
+    color: #555555 !important;
+
+    &::before {
+      border-color: $gray !important;
+    }
+    &::after {
+      background-color: $gray !important;
+    }
+  }
+}
+
+
+
+/* Slider */
+.checkbox.switch {
+  & > input[type="checkbox"], & > input[type="radio"] {
+    display: none;
+  }
+  & > p {
+    display: inline;
+    padding-left: 5px;
+    cursor: pointer;
+  }
+  padding-left: unset;
+  display: flex;
+  align-items: center;
+  -webkit-align-items: center;
+
+  & > span {
+    position: relative;
+    display: inline-block;
+    width: calc(18px * 2);
+    height: 18px;
+
+    &::before {
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: $gray !important;
+      border-radius: 9999px;
+      border: unset;
+      width: 100%;
+      height: 100%;
+      transition: 0.2s all;
+    }
+    &::after {
+      mask: unset;
+      top: 50%;
+      left: 3px;
+      transform: translateY(-50%);
+      width: 12px;
+      height: 12px;
+      background-color: #E8E8E8 !important;
+      border-radius: 9999px;
+      opacity: 1;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+      transition: 0.2s all;
+    }
+  }
+
+  & > input:checked ~ span {
+    &::before {
+      background-color: $blue;
+    }
+    &::after {
+      background-color: #fff !important;
+      left: calc(100% - 3px);
+      transform: translateY(-50%) translateX(-100%);
+    }
+  }
+
+  & > input:disabled {
+    & ~ p {
+      cursor: unset;
+    }
+    & ~ span {
+      &::after {
+        background-color: #C4C4C4 !important;
+        box-shadow: unset !important;
+      }
+    }
+  }
+}

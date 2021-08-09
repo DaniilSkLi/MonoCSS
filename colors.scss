@@ -1,0 +1,166 @@
+$gray: #CACFD2;
+$green: #2ECC71;
+$blue: #3498DB;
+$red: #E74C3C;
+$orange: #E67E22;
+$darkblue: #2C3E50;
+
+
+
+/* BG colors */
+.black {
+  color: black !important;
+}
+.white {
+  color: white !important;
+}
+
+/* Universal */
+div, button {
+  &.gray {
+    background-color: $gray !important;
+  }
+  &.green {
+    background-color: $green !important;
+  }
+  &.blue {
+    background-color: $blue !important;
+  }
+  &.red {
+    background-color: $red !important;
+  }
+  &.orange {
+    background-color: $orange !important;
+  }
+  &.darkblue {
+    background-color: $darkblue !important;
+  }
+}
+
+
+
+/* Inputs */
+input {
+  &.gray:focus {
+    border-color: $gray !important;
+  }
+  &.green:focus {
+    border-color: $green !important;
+  }
+  &.blue:focus {
+    border-color: $blue !important;
+  }
+  &.red:focus {
+    border-color: $red !important;
+  }
+  &.orange:focus {
+    border-color: $orange !important;
+  }
+  &.darkblue:focus {
+    border-color: $darkblue !important;
+  }
+}
+
+
+
+/* Text colors */
+.text-black {
+  color: black !important;
+}
+.text-white {
+  color: white !important;
+}
+
+.text-gray {
+  color: $gray !important;
+}
+.text-green {
+  color: $green !important;
+}
+.text-blue {
+  color: $blue !important;
+}
+.text-red {
+  color: $red !important;
+}
+.text-orange {
+  color: $orange !important;
+}
+.text-darkblue {
+  color: $darkblue !important;
+}
+
+
+
+/* Checkbox colors */
+.checkbox {
+  &.green {
+    & > span::before {
+      border-color: $green;
+    }
+    & > span::after {
+      background-color: $green;
+    }
+  }
+  &.blue {
+    & > span::before {
+      border-color: $blue;
+    }
+    & > span::after {
+      background-color: $blue;
+    }
+  }
+  &.red {
+    & > span::before {
+      border-color: $red;
+    }
+    & > span::after {
+      background-color: $red;
+    }
+  }
+  &.orange {
+    & > span::before {
+      border-color: $orange;
+    }
+    & > span::after {
+      background-color: $orange;
+    }
+  }
+  &.darkblue {
+    & > span::before {
+      border-color: $darkblue;
+    }
+    & > span::after {
+      background-color: $darkblue;
+    }
+  }
+}
+
+/* Switch colors */
+.checkbox.switch {
+  &.green {
+    & > input:checked ~ span::before, {
+      background-color: $green !important;
+    }
+  }
+  &.blue {
+    & > input:checked ~ span::before, {
+      background-color: $blue !important;
+    }
+  }
+  &.red {
+    & > input:checked ~ span::before, {
+      background-color: $red !important;
+    }
+  }
+  &.orange {
+    & > input:checked ~ span::before, {
+      background-color: $orange !important;
+    }
+  }
+  &.darkblue {
+    & > input:checked ~ span::before, {
+      background-color: $darkblue !important;
+    }
+  }
+}

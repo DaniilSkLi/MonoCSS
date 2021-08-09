@@ -1,0 +1,11 @@
+.title {
+  margin: 20px 0;
+  font-size: calc(24px + (28 - 24) * ((100vw - 320px) / (1200 - 320))); // 28px
+  font-weight: 500;
+}
+
+.title::before {
+  content: "#";
+  margin-right: 10px;
+  color: $gray;
+}
