@@ -1,0 +1,26 @@
+.help {
+  background-color: $black;
+  color: $white;
+  font-size: 18px;
+  width: max-content;
+  max-width: 50vw;
+  padding: 10px;
+  border-radius: 10px;
+  transform: translateY(calc(-100% - 10px));
+
+  & > .help_content > .help_title {
+    font-weight: bold;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: $black;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(50%) rotateZ(45deg);
+  }
+}

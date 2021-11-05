@@ -1,3 +1,5 @@
+$white: white;
+$black: black;
 $gray: #CACFD2;
 $green: #2ECC71;
 $blue: #3498DB;
@@ -17,6 +19,12 @@ $darkblue: #2C3E50;
 
 /* Universal */
 div, button {
+  &.white {
+    background-color: $white !important;
+  }
+  &.black {
+    background-color: $black !important;
+  }
   &.gray {
     background-color: $gray !important;
   }
@@ -41,6 +49,12 @@ div, button {
 
 /* Inputs */
 input {
+  &.white:focus {
+    border-color: $white !important;
+  }
+  &.black:focus {
+    border-color: $black !important;
+  }
   &.gray:focus {
     border-color: $gray !important;
   }
@@ -65,10 +79,10 @@ input {
 
 /* Text colors */
 .text-black {
-  color: black !important;
+  color: $black !important;
 }
 .text-white {
-  color: white !important;
+  color: $white !important;
 }
 
 .text-gray {
@@ -94,6 +108,22 @@ input {
 
 /* Checkbox colors */
 .checkbox {
+  &.white {
+    & > span::before {
+      border-color: $white;
+    }
+    & > span::after {
+      background-color: $white;
+    }
+  }
+  &.black {
+    & > span::before {
+      border-color: $black;
+    }
+    & > span::after {
+      background-color: $black;
+    }
+  }
   &.green {
     & > span::before {
       border-color: $green;
@@ -138,6 +168,16 @@ input {
 
 /* Switch colors */
 .checkbox.switch {
+  &.white {
+    & > input:checked ~ span::before, {
+      background-color: $white !important;
+    }
+  }
+  &.black {
+    & > input:checked ~ span::before, {
+      background-color: $black !important;
+    }
+  }
   &.green {
     & > input:checked ~ span::before, {
       background-color: $green !important;
@@ -161,6 +201,37 @@ input {
   &.darkblue {
     & > input:checked ~ span::before, {
       background-color: $darkblue !important;
+    }
+  }
+}
+
+
+
+
+
+.btn, .input {
+  &:focus {
+    box-shadow: 0px 0px 0px 3px color.adjust($blue, $alpha: -0.5);
+    &.white {
+      box-shadow: 0px 0px 0px 3px color.adjust($white, $alpha: -0.5);
+    }
+    &.black {
+      box-shadow: 0px 0px 0px 3px color.adjust($black, $alpha: -0.5);
+    }
+    &.gray {
+      box-shadow: 0px 0px 0px 3px color.adjust($gray, $alpha: -0.5);
+    }
+    &.green {
+      box-shadow: 0px 0px 0px 3px color.adjust($green, $alpha: -0.5);
+    }
+    &.red {
+      box-shadow: 0px 0px 0px 3px color.adjust($red, $alpha: -0.5);
+    }
+    &.orange {
+      box-shadow: 0px 0px 0px 3px color.adjust($orange, $alpha: -0.5);
+    }
+    &.darkblue {
+      box-shadow: 0px 0px 0px 3px color.adjust($darkblue, $alpha: -0.5);
     }
   }
 }

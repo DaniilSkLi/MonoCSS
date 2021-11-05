@@ -16,13 +16,22 @@
     color: #fff;
     margin: $basicMargin 0;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.2s all;
+
+    position: relative;
+    overflow: hidden;
 
     &.gray {
         color: #000;
     }
 
     &:hover {
-        filter: brightness(1.05);
+        filter: brightness(0.95);
+    }
+
+    &:active {
+        filter: brightness(0.9);
+        transform: scale(0.98);
     }
 
     &:disabled {
